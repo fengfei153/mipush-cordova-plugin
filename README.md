@@ -13,8 +13,7 @@
 
 - 通过Url安装:
 	
-		cordova plugin add https://github.com/wenin819/cordova-plugin-mipush.git --variable MI_PUSH_APP_KEY=your_mipush_appkey --variable MI_PUSH_APP_ID=your_mipush_appid --variable MI_PUSH_APP_IOS_ID=your_mipush_appid --variable MI_PUSH_APP_IOS_KEY=your_mipush_appkey
-
+		cordova plugin add https://github.com/fengfei153/mipush-cordova-plugin.git --variable MI_PUSH_APP_KEY=your_mipush_appkey --variable MI_PUSH_APP_ID=your_mipush_appid
 - 或者下载本地安装
 
 		cordova plugin add Your_Plugin_Path --variable MI_PUSH_APP_KEY=your_mipush_appkey --variable MI_PUSH_APP_ID=your_mipush_appid --variable MI_PUSH_APP_IOS_ID=your_mipush_appid --variable MI_PUSH_APP_IOS_KEY=your_mipush_appkey
@@ -64,6 +63,7 @@ Cordova CLI 的具体用法可参考 [Cordova CLI 官方文档](https://cordova.
 
 ## 感谢
 
+- [ChengTao](https://github.com/ParadiseHell/mipush-cordova-plugin)
 - [极光推送cordova插件](https://github.com/jpush/jpush-phonegap-plugin)
 - [cordova小米推送插件 安卓版实现](https://github.com/ParadiseHell/mipush-cordova-plugin)
 
