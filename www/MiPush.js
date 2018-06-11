@@ -10,7 +10,7 @@ MiPushPlugin.prototype.notificationMessageClicked = {};
 
 /*判断是否为Android设备*/
 MiPushPlugin.prototype.isAndroidDevice = function(){
-    return device.platform == 'Android';
+    return navigator.userAgent.indexOf('Android') >= 0;
 };
 /*失败的回调方法*/
 MiPushPlugin.prototype.error_callback = function(msg){

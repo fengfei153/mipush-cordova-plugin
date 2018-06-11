@@ -11,53 +11,13 @@
     <engines>
         <engine name="cordova" version=">=3.0" />
     </engines>
-    
+
     <preference name="MI_PUSH_APP_KEY"/>
     <preference name="MI_PUSH_APP_ID" />
-    <preference name="MI_PUSH_APP_IOS_KEY"/>
-    <preference name="MI_PUSH_APP_IOS_ID" />
-
-    <!-- dependencies -->
-    <dependency id="cordova-plugin-device" />
 
     <js-module src="www/MiPush.js" name="MiPush">
-        <clobbers target="MiPush" />
+        <clobbers target="window.plugins.MiPush" />
     </js-module>
-
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="MiPushPlugin">
-                <param name="ios-package" value="MiPushPlugin" />
-                <param name="onload" value="true" />
-            </feature>
-        </config-file>
-        <config-file target="*-Info.plist" parent="MiSDKAppID">
-            <string>$MI_PUSH_APP_IOS_ID</string>
-        </config-file>
-        <config-file target="*-Info.plist" parent="MiSDKAppKey">
-            <string>$MI_PUSH_APP_IOS_KEY</string>
-        </config-file>
-        <config-file target="*-Info.plist" parent="MiSDKRun">
-            <string>Online</string>
-        </config-file>
-
-        <header-file src="src/ios/Plugins/MiPushPlugin.h" />
-        <source-file src="src/ios/Plugins/MiPushPlugin.m" />
-        <header-file src="src/ios/Plugins/AppDelegate+MiPush.h" />
-        <source-file src="src/ios/Plugins/AppDelegate+MiPush.m" />
-
-        <header-file src="src/ios/lib/MiPushSDK.h" />
-        <source-file src="src/ios/lib/libMiPushSDK.a" framework="true" />
-
-        <framework src="UserNotifications.framework" weak="true" />
-        <framework src="libresolv.dylib" weak="true" />
-        <framework src="libxml2.dylib" weak="true" />
-        <framework src="libz.dylib" weak="true" />
-        <framework src="SystemConfiguration.framework" weak="true" />
-        <framework src="MobileCoreServices.framework" weak="true" />
-        <framework src="CFNetwork.framework" weak="true" />
-        <framework src="CoreTelephony.framework" weak="true" />
-    </platform>
 
     <platform name="android">
         <config-file target="config.xml" parent="/*">
@@ -72,9 +32,9 @@
             <uses-permission android:name="android.permission.READ_PHONE_STATE" />
             <uses-permission android:name="android.permission.GET_TASKS" />
             <uses-permission android:name="android.permission.VIBRATE"/>
-            <permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" android:protectionLevel="signature" />
+            <permission android:name="$PACKAGE_NAME.permission.MIPUSH_RECEIVE" android:protectionLevel="signature" />
             <!--这里com.xiaomi.mipushdemo改成app的包名-->
-            <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
+            <uses-permission android:name="$PACKAGE_NAME.permission.MIPUSH_RECEIVE" />
             <!--这里com.xiaomi.mipushdemo改成app的包名-->
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
@@ -129,7 +89,7 @@
             <meta-data android:name="MiPushAppId" android:value="$MI_PUSH_APP_IDmipush"></meta-data>
         </config-file>
 
-        <source-file src="src/android/MiPush_SDK_Client_3_4_5.jar" target-dir="libs" />
+        <lib-file src="src/android/MiPush_SDK_Client_3_4_5.jar" />
         <source-file src="src/android/MiPushPlugin.java" target-dir="src/com/ct/cordova/mipush" />
         <source-file src="src/android/MiPushReceiver.java" target-dir="src/com/ct/cordova/mipush" />
         
