@@ -13,14 +13,16 @@
         <engine name="cordova-android" version=">=6.3.0"/>
     </engines>
 
-    <preference name="MI_PUSH_APP_KEY"/>
-    <preference name="MI_PUSH_APP_ID" />
 
-    <js-module src="www/MiPush.js" name="MiPush">
-        <clobbers target="window.plugins.MiPush" />
-    </js-module>
 
     <platform name="android">
+        <preference name="MI_PUSH_APP_KEY"/>
+        <preference name="MI_PUSH_APP_ID" />
+
+        <js-module src="www/MiPush.js" name="MiPush">
+            <clobbers target="window.plugins.MiPush" />
+        </js-module>
+    
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="MiPushPlugin">
                 <param name="android-package" value="com.ct.cordova.mipush.MiPushPlugin"/>
