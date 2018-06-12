@@ -5,8 +5,7 @@
   "cordova": {
     "id": "cordova-plugin-mipush",
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   },
   "repository": {
@@ -17,8 +16,7 @@
     "cordova",
     "phonegap",
     "mipush",
-    "cordova-android",
-    "cordova-ios"
+    "cordova-android"
   ],
   "engines": {
     "cordovaDependencies": {

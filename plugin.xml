@@ -10,7 +10,6 @@
     <keywords>cordova,mipush</keywords>
 
     <engines>
-        <engine name="cordova" version=">=7.1.0"/>
         <engine name="cordova-android" version=">=6.3.0"/>
     </engines>
 
@@ -22,12 +21,12 @@
     </js-module>
 
     <platform name="android">
-        <config-file target="config.xml" parent="/*">
+        <config-file target="res/xml/config.xml" parent="/*">
             <feature name="MiPushPlugin">
                 <param name="android-package" value="com.ct.cordova.mipush.MiPushPlugin"/>
             </feature>
         </config-file>
-        <config-file target="AndroidManifest.xml" parent="/manifest">
+        <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
