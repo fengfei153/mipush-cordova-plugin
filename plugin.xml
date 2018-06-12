@@ -13,8 +13,6 @@
         <engine name="cordova-android" version=">=6.3.0"/>
     </engines>
 
-
-
     <platform name="android">
         <preference name="MI_PUSH_APP_KEY"/>
         <preference name="MI_PUSH_APP_ID" />
@@ -93,6 +91,5 @@
         <lib-file src="src/android/MiPush_SDK_Client_3_6_2.jar" />
         <source-file src="src/android/MiPushPlugin.java" target-dir="src/com/ct/cordova/mipush" />
         <source-file src="src/android/MiPushReceiver.java" target-dir="src/com/ct/cordova/mipush" />
-        
     </platform>
 </plugin>
