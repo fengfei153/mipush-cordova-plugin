@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-mipush",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Cordova/Phonegap MiPush Plugin",
   "cordova": {
     "id": "cordova-plugin-mipush",
@@ -20,12 +20,13 @@
     "cordova-android",
     "cordova-ios"
   ],
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=3.0"
+  "engines": {
+    "cordovaDependencies": {
+      "6.0.0": {
+        "cordova": ">100"
+      }
     }
-  ],
+  },
   "author": "https://github.com/fengfei153",
   "license": "Apache 2.0",
   "bugs": {

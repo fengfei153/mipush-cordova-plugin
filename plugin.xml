@@ -1,16 +1,12 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-mipush" 
-    version="2.0.0">
+    version="2.0.1">
     <name>MiPush</name>
     <description>Cordova MiPush Plugin</description>
     <author>https://github.com/fengfei153</author>
     <license>Apache 2.0</license>
     <keywords>cordova,mipush</keywords>
-
-    <engines>
-        <engine name="cordova" version=">=3.0" />
-    </engines>
 
     <preference name="MI_PUSH_APP_KEY"/>
     <preference name="MI_PUSH_APP_ID" />
