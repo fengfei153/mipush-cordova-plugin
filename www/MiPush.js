@@ -74,8 +74,4 @@ if (!window.plugins) {
   window.plugins = {};
 }
 
-if (!window.plugins.MiPushPlugin) {
-  window.plugins.MiPushPlugin = new MiPushPlugin();
-}
-
 module.exports = new MiPushPlugin();
