@@ -17,8 +17,8 @@
         <preference name="MI_PUSH_APP_KEY"/>
         <preference name="MI_PUSH_APP_ID" />
 
-        <js-module src="www/MiPush.js" name="MiPush">
-            <clobbers target="window.plugins.MiPush" />
+        <js-module src="www/MiPush.js" name="MiPushPlugin">
+            <clobbers target="window.plugins.MiPushPlugin" />
         </js-module>
     
         <config-file target="res/xml/config.xml" parent="/*">
