@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-mipush",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Cordova/Phonegap MiPush Plugin",
   "cordova": {
     "id": "cordova-plugin-mipush",
